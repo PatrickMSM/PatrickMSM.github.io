@@ -1,4 +1,4 @@
 # PatrickMSM.github.io
-PatrickMSM Webiste
+PatrickMSM Website
 # License
 License: GPL3
