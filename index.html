@@ -3,7 +3,13 @@
 	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 
-	<link rel="stylesheet" href="./res/index_v4.packed.css">
+
+	<link rel="preload" as="font" type="font/woff2" href="./res/font/roboto-v20-latin-100.woff2" crossorigin>
+	<link rel="preload" as="style" href="./res/index_v4.packed.css" crossorigin>
+
+
+	<link rel="stylesheet" href="./res/index_v4.packed.css" media="none" onload="if(media!='all')media='all'">  <!-- Fast Script -->
+		<noscript><link rel="stylesheet" href="./res/index_v4.packed.css"></noscript>
 	
 
 	<!-- Open Graph Begin -->
@@ -15,12 +21,17 @@
 	<!-- Open Graph End -->
 	
 
-	<link rel="preload" as="font" type="font/woff2" href="./res/font/roboto-v20-latin-100.woff2" crossorigin>
+	
+	
 
 	<title>Welcome!</title>
 
 	<!-- Hello! You just found an easteregg! -->
 
+
+
+
+	<link rel="preload" as="script" href="./res/index_v1.packed.js" crossorigin>
 </head>
 <body>
 	<span class="roboto" style="text-align: center;"><h1>PatrickMSM</h1></span>
@@ -29,11 +40,7 @@
 	<div>
 		<a href="https://github.com/PatrickMSM"><img width="50" height="50" class="socmedia" src="res/img/github.svg" title="PatrickMSM" /></a>
 		<a href="https://www.youtube.com/channel/UCMnA3rXJrHbtRp5uW-NhrSA"><img width="50" height="50" class="socmedia" src="res/img/youtube.svg" title="DuperTuber" /></a>
-		<script type="text/javascript">
-			function alertDiscord() {
-				alert("PatrickMSM#9997");
-			}
-		</script>
+		<script type="text/javascript" src="./res/index_v1.packed.js" />
 		<a onclick="alertDiscord()" href="javascript:void(0)"><img width="50" height="50" class="socmedia" src="res/img/discord.svg" title="PatrickMSM#9997"/></a>
 	</div>
 	<noscript>
