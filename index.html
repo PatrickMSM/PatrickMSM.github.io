@@ -5,11 +5,12 @@
 
 
 	<link rel="preload" as="font" type="font/woff2" href="./res/font/roboto-v20-latin-100.woff2" crossorigin>
-	<link rel="preload" as="style" href="./res/index_v4.packed.css">
 
 
-	<link rel="stylesheet" href="./res/index_v4.packed.css" media="none" onload="if(media!='all')media='all'">  <!-- Fast Script -->
-		<noscript><link rel="stylesheet" href="./res/index_v4.packed.css"></noscript>
+
+	<link rel="preload" as="style" href="./res/index_v5.packed.css">
+	<link rel="stylesheet" href="./res/index_v5.packed.css" media="none" onload="if(media!='all')media='all'">  <!-- Fast Script -->
+		<noscript><link rel="stylesheet" href="./res/index_v5.packed.css"></noscript>
 	
 
 	<!-- Open Graph Begin -->
@@ -31,21 +32,34 @@
 
 
 
-	<link rel="preload" as="script" href="./res/index_v1.packed.js">
+	<link rel="preload" as="script" href="./res/index_v2.packed.js">
+	<script type="text/javascript" src="./res/index_v2.packed.js" defer></script>
+	
 </head>
 <body>
-	<span class="roboto" style="text-align: center;"><h1>PatrickMSM</h1></span>
-	<span class="roboto" style="text-align: center;"><h1>Male Programmer from Romania</h1></span><br/>
-	<span class="roboto"><h3>Click one of the buttons below to view my social media.</h2></span>
+	<noscript>	
+		<h1><i>(Please enable javascript to view my discord. (PatrickMSM#9997)</i></h1>
+	</noscript>
+	<h1 class="roboto" style="text-align: center;">PatrickMSM</h1>
+	<h1 class="roboto" style="text-align: center;">Programmer from Romania</h1><br/>
+	<p class="roboto">&#x22;I am a programmer. I know lots of programming languages like c/c++, PHP, javascript, I know Java the most.&#x22;</p>
+	<h3 class="roboto">Click one of the buttons below to view my social media.</h3>
 	<div>
 		<a href="https://github.com/PatrickMSM"><img width="50" height="50" class="socmedia" src="res/img/github.svg" title="PatrickMSM"/></a>
 		<a href="https://www.youtube.com/channel/UCMnA3rXJrHbtRp5uW-NhrSA"><img width="50" height="50" class="socmedia" src="res/img/youtube.svg" title="DuperTuber"/></a>
-
-		<script type="text/javascript" src="./res/index_v1.packed.js"></script>
 		<a onclick="alertDiscord()" href="javascript:void(0)"><img width="50" height="50" class="socmedia" src="res/img/discord.svg" title="PatrickMSM#9997"/></a>
 	</div>
-	<noscript>	
-		<small><i>(Please enable javascript to view my discord. (PatrickMSM#9997)</i></small>
-	</noscript>
+
+	<br><br>
+
+	<h1 class="roboto">QnA:</h1>
+	<div>
+		<div id="container" onclick="dropdown(this.parentElement)">
+			<img width="40" height="40" src="res/img/dropdownarrow.svg"><span class="roboto">What is github.patsite.tk for?</span>
+		</div>
+		<div id="dropdowncontent" style="display: none;">
+			<p class="roboto">patsite.tk is running on my main computer, while github.patsite.tk is running on GitHub Pages. The difference is that patsite.tk is online when I am online, BUT it can host dynamic content. On the other hand, github.patsite.tk can only host static content, BUT it is online 24/7.<br><br>PS.: Most of my services are dynamic, so they will not run all the time.</p>
+		</div>
+	</div>
 </body>
 </html>
