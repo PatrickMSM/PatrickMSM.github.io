@@ -23,11 +23,12 @@ body {
 	color: #EEE;
 }
 
-img.socmedia {
+.socmedia {
 	border-radius: 10px;
+	z-index: 1;
 }
 
-img.socmedia:hover {
+.socmedia:hover {
 	transition: background-color 1.2s linear;
 	background-color: #444;
 }
@@ -35,4 +36,10 @@ img.socmedia:hover {
 div#container {
   display: flex;
   align-items: center;
+  z-index: 0;
+}
+
+.clickable {
+	cursor: pointer;
+	z-index: 3;
 }
