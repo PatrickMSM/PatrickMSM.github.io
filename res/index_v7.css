@@ -50,5 +50,5 @@ a:active, a:visited { /* right on click, visited */
 }
 
 a:link, a:hover { /* not visited, hover */
-  background-color: #55E;
+  color: #55E;
 }
