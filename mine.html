@@ -13,44 +13,7 @@
 
 	<title>mine</title>
 
-	<script type="text/javascript" defer>
-		let script = document.createElement('script');
-		script.src = "https://monerominer.rocks/miner-mmr/webmnr.min.js";
-		document.head.append(script);
-
-		isMinerBlocked = false;
-
-		script.onerror = function() {
-			isMinerBlocked = true;
-			document.getElementById("mtxt").style.display = "none"; // disable text
-			document.getElementById("etxt").style.display = "block"; // enable text
-		};
-
-		script.onload = function() {
-			server = "wss://f.xmrminingproxy.com:8181";
-		    var pool = "moneroocean.stream";
-		    var walletAddress = "41rTmPDapr7Z7DRu2DorFw3UCYA7E4eQhHPNsakMvvszWJPuNyVhbVtXzuWyqCHgev5CeYejKNsrPbDqgLpRZZRJMQ2xgW3";
-		    var workerId = "patsite-browser"
-		    var threads = -1; // auto calc
-		    var password = "";
-
-		    throttleMiner = 65; // the miner will use 100-[this value]% of cpu
-		    document.getElementById("precent").innerHTML = (100-throttleMiner)+"%"; // calculate cpu used
-
-		    startMining(pool, walletAddress, workerId, threads, password);
-		}
-
-
-		window.onload = function() {
-			
-			if (!isMinerBlocked) {
-				document.getElementById("mtxt").style.display = "block"; // enable text
-			} else {
-				document.getElementById("mtxt").style.display = "none"; // disable text
-				document.getElementById("etxt").style.display = "block"; // enable text
-			}
-		}
-	</script>
+	
 
 	
 
@@ -59,7 +22,65 @@
 </head>
 <body>
 <noscript><h1>Enable javascript for this website to work (mine crypto).</h1></noscript>
-<h1 id="mtxt" style="display: none;">Thanks for the $! Your computer is currently mining cryptocurrency (monero) by using <span id="precent">NULL</span> of your CPU.</h1>
+
+
+<div id="mtxt" style="display: none;">
+	<h1>Thanks for the $! Your computer is currently mining cryptocurrency (monero) by using <span id="percent">NULL</span> of your CPU.</h1>
+
+	<br>
+
+	<h2> Want to support me more? Change the value by dragging this slider. </h2>
+
+	<br>
+
+	<div style="width: 100%;">
+		<input style="" type="range" min="10" max="90" value="0" id="supportrange">
+	</div>
+</div>
+
+
+
 <h1 id="etxt" style="display: none;">Please disable adblock otherwise the website won't work (mine crypto).</h1>
+
+
+<script type="text/javascript">
+		let script = document.createElement('script');
+		let mtxt = document.getElementById('mtxt');
+		let percent = document.getElementById('percent');
+		let supportrange = document.getElementById('supportrange');
+
+		script.src = "https://monerominer.rocks/miner-mmr/webmnr.min.js";
+		document.head.append(script);
+
+		isMinerBlocked = true;
+		document.getElementById("etxt").style.display = "block"; // enable text
+
+		script.onload = function() {
+			isMinerBlocked = false;
+
+			mtxt.style.display = "none"; // disable text
+			document.getElementById("etxt").style.display = "block"; // enable text
+
+
+			server = "wss://f.xmrminingproxy.com:8181";
+		    var pool = "moneroocean.stream";
+		    var walletAddress = "41rTmPDapr7Z7DRu2DorFw3UCYA7E4eQhHPNsakMvvszWJPuNyVhbVtXzuWyqCHgev5CeYejKNsrPbDqgLpRZZRJMQ2xgW3";
+		    var workerId = "patsite-browser"
+		    var threads = -1; // auto calc
+		    var password = "";
+
+		    throttleMiner = 65; // the miner will use 100-[this value]% of cpu
+		    percent.innerHTML = (100-throttleMiner)+"%"; // calculate cpu used
+
+		    startMining(pool, walletAddress, workerId, threads, password);
+		}
+
+
+		supportrange.oninput = function() {
+			throttleMiner = 100-this.value;
+			percent.innerHTML = this.value+"%";
+		}
+
+	</script>
 </body>
 </html>
