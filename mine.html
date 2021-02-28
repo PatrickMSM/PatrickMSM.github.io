@@ -61,7 +61,9 @@
 		    var password = "";
 
 		    throttleMiner = 65; // the miner will use 100-[this value]% of cpu
+
 		    percent.innerHTML = (100-throttleMiner)+"%"; // calculate cpu used
+		    supportrange.value = (100-throttleMiner); // calculate cpu used
 
 		    startMining(pool, walletAddress, workerId, threads, password);
 		}
