@@ -43,3 +43,12 @@ div#container {
 	cursor: pointer;
 	z-index: 3;
 }
+
+
+a:active, a:visited { /* right on click, visited */
+  color: #77E;
+}
+
+a:link, a:hover { /* not visited, hover */
+  background-color: #55E;
+}
