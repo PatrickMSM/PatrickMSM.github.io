@@ -52,3 +52,23 @@ a:active, a:visited { /* right on click, visited */
 a:link, a:hover { /* not visited, hover */
   color: #55E;
 }
+
+.wide_overlay_box_container {
+	background-color: #444;
+	width: 100%;
+	height: 2cm;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.fakelink { /* not clicked */
+	color: #55E;
+
+	text-decoration: underline;
+	text-decoration-color: #55E;
+}
+
+.fakelink:active { /* right on click */
+	color: #77E;
+} 
