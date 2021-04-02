@@ -1,0 +1,15 @@
+# BOTS!!!
+# THEYRE ALL BOTS!!
+
+# Group 1: Disallow resources
+User-agent: *
+Disallow: /res/
+
+# Group 2: Disallow github stuff and other stuff
+User-agent: *
+Disallow: /LICENSE
+Disallow: /README.md
+
+# Group 3: Disallow root dir scripts
+User-agent: *
+Disallow: arc-sw.js
