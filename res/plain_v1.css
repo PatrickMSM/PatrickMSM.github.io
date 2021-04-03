@@ -1,0 +1,54 @@
+body {
+	background-color: #333;
+}
+
+/* roboto-100 - latin */
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 100;
+	font-display: swap;
+	src: url('./font/roboto-v20-latin-100.eot'); /* IE9 Compat Modes */
+	src: local(''),
+		url('./font/roboto-v20-latin-100.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('./font/roboto-v20-latin-100.woff2') format('woff2'), /* Super Modern Browsers */
+		url('./font/roboto-v20-latin-100.woff') format('woff'), /* Modern Browsers */
+		url('./font/roboto-v20-latin-100.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('./font/roboto-v20-latin-100.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+.roboto {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	color: #EEE;
+}
+
+div#container {
+  display: flex;
+  align-items: center;
+  z-index: 0;
+}
+
+.clickable {
+	cursor: pointer;
+	z-index: 3;
+}
+
+a:active, a:visited { /* right on click, visited */
+  color: #77E;
+}
+
+a:link, a:hover { /* not visited, hover */
+  color: #55E;
+}
+
+.fakelink { /* not clicked */
+	color: #55E;
+
+	text-decoration: underline;
+	text-decoration-color: #55E;
+}
+
+.fakelink:active { /* right on click */
+	color: #77E;
+}
