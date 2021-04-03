@@ -3,12 +3,13 @@
 
 # Group 1: Disallow resources
 User-agent: *
-Disallow: /res/
+Disallow: res/
 
 # Group 2: Disallow github stuff and other stuff
 User-agent: *
-Disallow: /LICENSE
-Disallow: /README.md
+Disallow: LICENSE
+Disallow: README.md
+Disallow: .htaccess
 
 # Group 3: Disallow root dir scripts
 User-agent: *
