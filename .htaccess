@@ -4,3 +4,11 @@ order allow,deny
 deny from all
 satisfy all
 </Files>
+
+
+
+RewriteEngine On
+# if not localhost
+RewriteCond %{HTTP_HOST} !^localhost$ [NC]
+# deny access to these
+RewriteRule ^(LICENSE|README.md|)$ - [L,F]
