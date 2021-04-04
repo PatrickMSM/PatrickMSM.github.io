@@ -15,7 +15,6 @@ Disallow: /.htaccess
 User-agent: *
 Disallow: /arc-sw.js
 
-# Group 4: Disallow article data and allow article pages
+# Group 4: Disallow article data
 User-agent: *
-Disallow: /articles/*
-Allow: /articles/*/*.html
+Disallow: /articles/*.jpg
