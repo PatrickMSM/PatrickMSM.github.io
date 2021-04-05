@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport">
+	
+	<script async src="https://arc.io/widget.min.js#DjWFXXih"></script>	
+
+	<link rel="preload" as="font" type="font/woff2" href="/res/font/roboto-v20-latin-100.woff2" crossorigin>
+
+	<link rel="preload" as="style" href="/res/plain_v1.packed.css">
+	<link rel="stylesheet" href="/res/plain_v1.packed.css" media="none" onload="if(media!='all')media='all'">  <!-- Fast Script -->
+		<noscript><link rel="stylesheet" href="/res/plain_v1.packed.css"></noscript>
+
+	<meta name="description" content="Want to know how websites and ad companies can personally identify you? Check this website out!" />
+	<title>Browser fingerprint</title>
+
+    
+    <script type="text/javascript">
+        function clientJsLoaded(){client=new ClientJS,document.getElementById("fp").innerHTML=client.getFingerprint()}
+    </script>
+</head>
+<body>
+    <noscript><h1 class="roboto">This website won't work without javascript!!!</h1></noscript>
+    <h1 class="roboto" style="text-align: center;">Your browser fingerprint is: <br><b><i><span id="fp">Loading...</span></i></b></h1>
+    <p class="roboto">So what exactly is a <i>&#x22;Browser Fingerprint&#x22;</i>? A browser fingerprint is a unique identifier <i>(<code>UID</code>)</i> that is attached to you and your browser. Something like a unique name. You can test this out by opening a new incognito tab and noticing that the number stays the same. How does this work? It works by analyzing your screen resolution, operating system, and so and <a href="https://github.com/jackspirou/clientjs">ClientJS</a> calculates it into a number that uniquely distinguishes you.</p>
+    <script type="text/javascript" src="/res/client.min.js" onload="clientJsLoaded()" defer></script>
+</body>
