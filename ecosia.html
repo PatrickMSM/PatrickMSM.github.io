@@ -9,8 +9,8 @@
 	<meta name="description" content="Want to search with ecosia and help plant trees just by searching? Click here" />
 	<title>Ecosia search</title>
     <script type="text/javascript">
-        function f(a,b=window.location.href){a=a.replace(/[\[\]]/g,"\\$&");var c=new RegExp("[?&]"+a+"(=([^&#]*)|&|#|$)"),d=c.exec(b);return d?d[2]?d[2]:"":null}let p=f("q");null!=p&&""!=p&&window.location.replace("https://www.ecosia.org/search?q="+p);
-    </script>
+        function f(e,f=window.location.href){e=e.replace(/[\[\]]/g,"\\$&");var b=new RegExp("[?&]"+e+"(=([^&#]*)|&|#|$)"),c=b.exec(f);return c?c[2]?c[2]:"":null}let p=f("q");null!=p&&""!=p&&setTimeout(function(){window.location.replace("http://www.ecosia.org/search?q="+p)},3e3);
+	</script>
 	<style>
 		.wrapper{
 			position: absolute;
@@ -34,12 +34,10 @@
 	</style>
 </head>
 <body>
-	
-
-
 	<div class="wrapper">
 		<div class="container">
 			<form action="https://ecosia.org/search" method="GET">
+				<h2>PAT's Search</h2>
 				<input type="search" class="srcin" name="q" placeholder="SEARCH HERE...">
 				<input type="submit" class="srcbtn" value="SEARCH">
 			</form>
