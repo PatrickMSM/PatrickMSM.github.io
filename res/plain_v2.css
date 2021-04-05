@@ -23,16 +23,6 @@ body {
 	color: #EEE;
 }
 
-.socmedia {
-	border-radius: 10px;
-	z-index: 1;
-}
-
-.socmedia:hover {
-	transition: background-color 1.2s linear;
-	background-color: #444;
-}
-
 div#container {
   display: flex;
   align-items: center;
@@ -61,4 +51,12 @@ a:link, a:hover { /* not visited, hover */
 
 .fakelink:active { /* right on click */
 	color: #77E;
+}
+
+
+input, textarea {
+	background-color: #333;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	color: #EEE;
 }
