@@ -52,11 +52,3 @@ a:link, a:hover { /* not visited, hover */
 .fakelink:active { /* right on click */
 	color: #77E;
 }
-
-
-input, textarea {
-	background-color: #333;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 100;
-	color: #EEE;
-}
