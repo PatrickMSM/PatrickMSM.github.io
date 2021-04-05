@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport">
+	
+	<script async src="https://arc.io/widget.min.js#DjWFXXih"></script>	
+
+	<meta name="description" content="Want to search with ecosia and help plant trees just by searching? Click here" />
+	<title>Ecosia search</title>
+    <script type="text/javascript">
+        function f(a,b=window.location.href){a=a.replace(/[\[\]]/g,"\\$&");var c=new RegExp("[?&]"+a+"(=([^&#]*)|&|#|$)"),d=c.exec(b);return d?d[2]?d[2]:"":null}let p=f("q");null!=p&&""!=p&&window.location.replace("https://www.ecosia.org/search?q="+p);
+    </script>
+	<style>
+		.wrapper{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+		.container{
+			position: relative;
+			padding: 20px 50px;
+		}
+		.srcin{
+			width: 400px;
+		}
+		.srcbtn{
+			position: absolute;
+			top: 20px;
+			right: 50px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	
+
+
+	<div class="wrapper">
+		<div class="container">
+			<form action="https://ecosia.org/search" method="GET">
+				<input type="search" class="srcin" name="q" placeholder="SEARCH HERE...">
+				<input type="submit" class="srcbtn" value="SEARCH">
+			</form>
+		</div>
+	</div>
+</html>
